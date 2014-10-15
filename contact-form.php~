@@ -9,7 +9,7 @@ if (isset($_POST['inputName']) && isset($_POST['inputPrenom']) && isset($_POST['
     $to      = 'simongarnier07@hotmail.fr';
     $subject = 'contact site web';
     $message = $_POST['inputMessage'];			
-    $headers = 'From:' . $_POST['inputEmail'] . "\r\n" .
+    $headers = 'From:' $_POST['inputEmail'] . "\r\n" .
     'Reply-To: webmaster@example.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
