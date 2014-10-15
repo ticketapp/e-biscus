@@ -55,6 +55,11 @@ nav.navBottom li:hover {background-image:url('bgbtn.png'); background-repeat: no
 .savoir{position: absolute; top:320px; right: 0; z-index: 2;}
 
 .partenaires{height: 65%; bottom: 0; width: 100%; position: absolute; background-image: url('bgcontact.jpg'); background-repeat: repeat;}
+.contact{height:80%; bottom: 0; width: 100%; position: absolute; background-image: url('bgcontact.jpg'); background-repeat: repeat;}
+.btncontactContener{text-align:center; margin-left:0!important;}
+.btncontact{width:50%}
+.imgcontact{margin-right: auto; margin-left: auto; width: 60%; float: none;}
+.imgcontactContener{text-align:center; margin-top: 50px;}
 .logoContener{width: 40%; margin-left: auto; margin-right: auto; margin-top: 10%;}
 .exit{position: absolute; right: 0; cursor:pointer;}
 .titleContenerModal {text-align:center;}
