@@ -8,7 +8,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     .when('/histoires_regionales', {templateUrl: 'partials/histoires.html'})
     .when('/foires_marches_brocantes', {templateUrl: 'partials/foires.html'})
     .when('/horoscope', {templateUrl: 'partials/horoscope.html'})
-    .when('/mentionslégales', {templateUrl: 'partials/mentionslégales.html'})
+    .when('/mentionslegales', {templateUrl: 'partials/mentionslégales.html'})
     .when('/historique', {templateUrl: 'partials/historique.html'})
      .otherwise({redirectTo: '/'});
 

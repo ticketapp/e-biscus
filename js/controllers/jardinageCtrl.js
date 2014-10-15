@@ -23,6 +23,7 @@ app.controller('jardinageCtrl', function ($scope) {
     $scope.setMaster = function(article) {
         $scope.selected = article;
         $scope.query = $scope.selected.title;
+        $scope.voir = false;
     }
 
     $scope.isSelected = function(article) {

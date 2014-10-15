@@ -17,11 +17,12 @@
                         </div>
                     </div>
                     <div class="span10">
-                        <h1>Conseils en jardinage</h1>
+                        <h1>Conseils en jardinage
+                        <input class="monthSearch span10" type="text" ng-model="query" ng-change="selectQuery(); voir = false"/>
                         <div class="row-fluid span10 controller">
-                        <a class="span3" ng-click="prev()"><img src="img/btnleft.jpg"/> </a>
-                        <input class="monthSelect" type="text" ng-model="query" ng-change="selectQuery()"/>
-                        <a class="span3 right next" ng-click="next()"><img src="img/btnright.jpg"/></a>
+                            <a class="span3" ng-click="prev(); voir = false"><img src="img/btnleft.jpg"/> </a>
+                            <input class="monthSelect" type="text" ng-model="query" ng-change="selectQuery(); voir = false"/>
+                            <a class="span3 right next" ng-click="next(); voir = false"><img src="img/btnright.jpg"/></a>
                         </div>
                     </div>
                 </div>
@@ -29,10 +30,11 @@
             <div class="conseilContain span6">
                  <div class="conseilContainFond"></div>
                 <div ng-repeat="article in articles | filter:{title:query}"
-                     class="span11 conseilContent">
+                     class="span11 conseilContent" ng-class="{preview: !voir}">
                     <h1>{{article.title}}</h1>
                     <div data-ng-bind-html="article.content"></div>
                 </div>
+                <a ng-click="voir = true" ng-show="!voir" class="span3 savoir">En savoir +</a>
             </div>
         </div>
     </div>
