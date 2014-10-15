@@ -1,15 +1,46 @@
-<div class="contact">
+<!--<div class="contact">
     <img src="img/exit.jpg" ng-click="cancel()" class="exit">
     <div class="row-fluid span12 titleContenerModal">
         <img class="span5" src="img/leftTitleModal.jpg"/>
         <h5 class="span2">Nos partenaires</h5>
         <img class="span5 right" src="img/rightTitleModal.jpg"/>
     </div>
-    <div class="row-fluid span12">
-        <div class="logoContener row-fluid">
-            <img src="img/bonnefond.jpg" class="span4">
-            <img src="img/progres.jpg" class="span4">
-            <img src="img/rhone.jpg" class="span4">
-        </div>
+</div> -->
+<div class="modal-header">
+    <h3 class="modal-title">Contact</h3>
+</div>
+
+<div class="modal-body row-fluid">
+    <div ng-controller="ContactController">
+        <form ng-submit="submit(contactform)" name="contactform" class="span6" novalidate>
+            <div class="span6">
+                <input ng-model="formData.inputName" type="text" id="inputName"
+                       name="inputName" placeholder="Nom*" required>
+
+                <input ng-model="formData.inputPrenom" type="text" id="inputPrenom"
+                       name="inputPrenom" placeholder="Prénom*" required>
+
+                <input ng-model="formData.inputEmail" type="email" id="inputEmail"
+                       name="inputEmail" placeholder="Courriel*" required>
+
+                <input ng-model="formData.inputAdresse" type="text" id="inputAdresse"
+                       name="inputaAdresse" placeholder="Adresse">
+
+                <input ng-model="formData.inputCP" type="number" id="inputCP" name="inputCP" placeholder="Code postal">
+
+                <input ng-model="formData.inputVille" type="text" id="inputVille" name="inputVille" placeholder="Ville">
+            </div>
+            <textarea ng-model="formData.inputMessage" class="form-control" rows="8" id="inputMessage"
+                      name="inputMessage" placeholder="Message*" class="span6" required>
+            </textarea>
+
+            <button class="btn btn-default" ng-disabled="submitButtonDisabled">Envoyer</button>
+
+        </form>
+        <p ng-class="result">{{ resultMessage }}</p>
     </div>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-warning" ng-click="cancel()">Annuler</button>
 </div>
