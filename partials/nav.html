@@ -1,0 +1,44 @@
+<div class="hautPage">
+    <div class="navContener row-fluid">
+        <div class="bgnav">
+            <img src="img/bg_top_home_nav.png" alt="bgnav" class="bgnavTopBorder">
+            <img src="img/bgnav.jpg" alt="bgnav" class="bgnavTopCont">
+        </div>
+        <nav class="navTop" ng-controller="DropdownCtrl">
+            <h1>almanach du Père Benoit</h1>
+            <ul class="navTopUl">
+                <li>
+                    <a href="#/">accueil</a>
+                </li>
+                <li class="dropdown" on-toggle="toggled(open)">
+                    <a href class="dropdown-toggle">
+                       thématiques
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#/calendrier">Calendrier lune et soleil</a>
+                        </li>
+                        <li>
+                            <a href="#/conseils_jardinage">Conseils de jardinage</a>
+                        </li>
+                        <li>
+                            <a href="#/histoires_regionales">Histoires régionales</a>
+                        </li>
+                        <li>
+                            <a href="#/foires_marches_brocantes">Foires, marchés et brocantes</a>
+                        </li>
+                        <li>
+                            <a href="#/horoscope">Horoscope</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#/historique">historique</a>
+                </li>
+                <li>
+                    <a href="#/points_de_vente">Points de Vente</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

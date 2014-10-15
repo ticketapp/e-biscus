@@ -1,0 +1,25 @@
+<div class="artContener" ng-controller="horoscopeCtrl">
+    <div class="historique">
+        <div class="art row-fluid">
+            <div class="span1">
+                <div class="dropdown selectHistory" on-toggle="toggled(open)">
+                    <a href class="dropdown-toggle">
+                        <img class="openimg" src="img/selectHistoryOpen.png"/>
+                        <img class="closeimg" src="img/selectHistory.png"/>
+                    </a>
+                    <ul class="dropdown-menu list-holder">
+                        <li ng-repeat="article in articles" ng-class="{active : isSelected(article)}">
+                            <a ng-click="setMaster(article)">{{article.title}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span10">
+                <div ng-repeat="article in articles" class="animate-show" ng-show="selected.title == '{{article.title}}'">
+                    <h1>{{article.title}}</h1>
+                    <div data-ng-bind-html="article.content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
